@@ -1,0 +1,262 @@
+.body {
+    background-color: #4b5e27;
+}
+
+h1 {
+    color: white;
+    font-size: 60px;
+    font-family: "Arial";
+    text-align: center;
+    padding-top: 15%;
+
+}
+
+form {
+    text-align: center;
+}
+
+input {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: transparent;
+    border-color: white;
+    font-size: 35px;
+}
+
+input:hover {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    border-color: black;
+    font-size: 35px;
+}
+
+.game-field {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-field .row {
+    height: 32px;
+    display: flex;
+}
+
+.game-field .row .field {
+    height: 32px;
+    width: 32px;
+    background: url('../img/ground.png');
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    image-rendering: pixelated;
+}
+
+.game-field .row .field.wall {
+    background: url('../img/wall.png');
+    image-rendering: pixelated;
+}
+
+.game-field .row .field.gate {
+    background: url('../img/ground.png');
+    image-rendering: pixelated;
+}
+
+.game-field .row .field.hero[data-direction="down"] {
+    background: url('../img/player-facing-down-standing.png'), #80A344;
+    image-rendering: pixelated;
+}
+
+.game-field .row .field.hero[data-direction="up"] {
+    background: url('../img/player-facing-up-standing.png'), #80A344;
+    image-rendering: pixelated;
+}
+
+.game-field .row .field.hero[data-direction="right"] {
+    background: url('../img/player-facing-right-standing.png'), #80A344;
+    image-rendering: pixelated;
+}
+
+.game-field .row .field.hero[data-direction="left"] {
+    background: url('../img/player-facing-left-standing.png'), #80A344;
+    image-rendering: pixelated;
+}
+
+.hud-hp {
+    height: 64px;
+    display: flex;
+}
+
+.hud-coins {
+    margin-left: 64px;
+    height: 64px;
+    width: 64px;
+    background: url("../img/hud-coins.png");
+    background-size: contain;
+    image-rendering: pixelated;
+}
+
+.hud-coin-amount {
+    margin-left: 16px;
+    font-family: monospace;
+    font-size: x-large;
+    color: white;
+}
+
+.hero-hp-4 {
+    height: 64px;
+    width: 64px;
+    background: url("../img/hud-health.png");
+    background-size: contain;
+    image-rendering: pixelated;
+}
+
+.hero-hp-3 {
+    height: 64px;
+    width: 64px;
+    background: url("../img/hud-three-quarter-health.png");
+    background-size: contain;
+    image-rendering: pixelated;
+}
+.hero-hp-2 {
+    height: 64px;
+    width: 64px;
+    background: url("../img/hud-half-health.png");
+    background-size: contain;
+    image-rendering: pixelated;
+}
+.hero-hp-1 {
+    height: 64px;
+    width: 64px;
+    background: url("../img/hud-quarter-health.png");
+    background-size: contain;
+    image-rendering: pixelated;
+}
+.hero-hp-0 {
+    height: 64px;
+    width: 64px;
+    background: url("../img/hud-zero-health.png");
+    background-size: contain;
+    image-rendering: pixelated;
+}
+
+
+.game-field .row .field.monster[data-direction="down"] {
+    background: url('../img/enemy-facing-down-standing.png'), #80A344;;
+    image-rendering: pixelated;
+}
+
+.game-field .row .field.monster[data-direction="up"] {
+    background: url('../img/enemy-facing-up-standing.png'), #80A344;;
+    image-rendering: pixelated;
+}
+
+.game-field .row .field.monster[data-direction="right"] {
+    background: url('../img/enemy-facing-right-standing.png'), #80A344;;
+    image-rendering: pixelated;
+}
+
+.game-field .row .field.monster[data-direction="left"] {
+    background: url('../img/enemy-facing-left-standing.png'), #80A344;;
+    image-rendering: pixelated;
+}
+
+.game-field .row .field.coin {
+    background: url('../img/coins.png'), #80A344;
+    image-rendering: pixelated;
+}
+.game-field .row .field.chest {
+    background: url('../img/chest.png'), #80A344;
+    image-rendering: pixelated;
+}
+.game-field .row .field.bush {
+    background: url('../img/bush.png'), #80A344;
+    image-rendering: pixelated;
+}
+.game-field .row .field.sword {
+    background: url('../img/sword.png'), #80A344;
+    image-rendering: pixelated;
+}
+
+.game-field .row .field.hero.hero_attack[data-direction="up"] {
+    background: url('../img/player-facing-up-attacking.png'), #80A344;
+    image-rendering: pixelated;
+}
+
+.game-field .row .field.hero.hero_attack[data-direction="down"] {
+    background: url('../img/player-facing-down-attacking.png'), #80A344;
+    image-rendering: pixelated;
+}
+
+.game-field .row .field.hero.hero_attack[data-direction="right"] {
+    background: url('../img/player-facing-right-attacking.png'), #80A344;
+    image-rendering: pixelated;
+}
+
+.game-field .row .field.hero.hero_attack[data-direction="left"] {
+    background: url('../img/player-facing-left-attacking.png'), #80A344;
+    image-rendering: pixelated;
+}
+
+.game-field .row .field.hero.hero_move[data-direction="up"] {
+    background: url('../img/player-facing-up-moving.png'), #80A344;
+    image-rendering: pixelated;
+}
+
+.game-field .row .field.hero.hero_move[data-direction="down"] {
+    background: url('../img/player-facing-down-moving.png'), #80A344;
+    image-rendering: pixelated;
+}
+
+.game-field .row .field.hero.hero_move[data-direction="left"] {
+    background: url('../img/player-facing-left-moving.png'), #80A344;
+    image-rendering: pixelated;
+}
+
+.game-field .row .field.hero.hero_move[data-direction="right"] {
+    background: url('../img/player-facing-right-moving.png'), #80A344;
+    image-rendering: pixelated;
+}
+
+.game-field .row .field.monster.monster_move[data-direction="left"] {
+    background: url('../img/enemy-facing-left-moving.png'), #80A344;
+    image-rendering: pixelated;
+}
+
+.game-field .row .field.monster.monster_move[data-direction="right"] {
+    background: url('../img/enemy-facing-right-moving.png'), #80A344;
+    image-rendering: pixelated;
+}
+
+.game-field .row .field.monster.monster_move[data-direction="up"] {
+    background: url('../img/enemy-facing-up-moving.png'), #80A344;
+    image-rendering: pixelated;
+}
+
+.game-field .row .field.monster.monster_move[data-direction="down"] {
+    background: url('../img/enemy-facing-down-moving.png'), #80A344;
+    image-rendering: pixelated;
+}
+
+
+.game-field .row .field.monster.monster_attack[data-direction="up"] {
+    background: url('../img/enemy-facing-up-attacking.png'), #80A344;
+    image-rendering: pixelated;
+}
+
+.game-field .row .field.monster.monster_attack[data-direction="down"] {
+    background: url('../img/enemy-facing-down-attacking.png'), #80A344;
+    image-rendering: pixelated;
+}
+
+.game-field .row .field.monster.monster_attack[data-direction="right"] {
+    background: url('../img/enemy-facing-right-attacking.png'), #80A344;
+    image-rendering: pixelated;
+}
+
+.game-field .row .field.monster.monster_attack[data-direction="left"] {
+    background: url('../img/enemy-facing-left-attacking.png'), #80A344;
+    image-rendering: pixelated;
+}
