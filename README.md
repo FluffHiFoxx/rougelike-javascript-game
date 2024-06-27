@@ -1,12 +1,3 @@
-# Project background
-
-This is a copy of an old project from the time when I was learning plain javascript.
-
-This project was made in a week with 2 other peaople as alearning exercise given by the programming school that we enrolled in.
-
-The project copy/re-upload was suggested and authorised by a school mentor (teacher).
-
----
 # Rougelike Javascript Game
 
 A very basic Rouglelike Dungeon crawl game with dynamic rooms and animated player and enemies.
@@ -18,8 +9,8 @@ Some simple equipment like swords and collectibles like coins, chests.
  - CSS
 
 ## How to play
-
-You can start the game by simply starting the `index.html`
+The game does not require any installation, it runs in a browser.
+You can start the game by going in the root folder and simply opening the `index.html`.
 
 **Controls:**
 - `arrow keys` -- moving
